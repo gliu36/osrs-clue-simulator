@@ -3,7 +3,7 @@
 
 This is a basic clue scroll simulator where you can test your RNG.
 
-Here: [https://gliu36.github.io/osrs-clue-simulator/](https://gliu36.github.io/osrs-clue-simulator/)
+Check it out here: [https://gliu36.github.io/osrs-clue-simulator/](https://gliu36.github.io/osrs-clue-simulator/)
 
   
 ~ Hope you enjoy, don't spend too much time here... it's exp waste

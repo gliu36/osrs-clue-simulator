@@ -1,30 +1,26 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
-// import '../styles/Main.css'
 
-// Background Components
-import Navigation from './Navigation.js'
-import DoesNotExist from './DoesNotExist.js'
+import '../styles/Main.css'
 
-// Tabs
-import About from './About.js'
-import Beginner from './Beginner/Beginner.js'
-// import Easy from './Easy/Easy.js'
+import { Layout, Header, Navigation, Content } from 'react-mdl';
+import { Link } from 'react-router-dom';
+import PageRoutes from './PageRoutes'
 
 function Main() {
 	return (
 		<div className="Main">
-			<h1>Clue Scroll Sim v0.01</h1>
-			<Router>
-				<div>
-					<Navigation />
-					<Switch>
-						<Route path='/' exact component={About}/>
-						<Route path='/Beginner' component={Beginner}/>
-						<Route component={DoesNotExist} status={404}/>
-					</Switch>
-				</div>
-			</Router>
+			<Layout fixedHeader>
+				<Header className="header" title="Clue Scrolls">
+					<Navigation>
+						<Link to="/">Home</Link>
+						<Link to="/Beginner">Beginner</Link>
+					</Navigation>
+				</Header>
+			</Layout>
+			<Content>
+				<div className="page-content" />
+				<PageRoutes />
+        	</Content>
 		</div>
 	);
 }
