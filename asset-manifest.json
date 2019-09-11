@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/osrs-clue-simulator/static/css/main.2cce8147.chunk.css",
-    "main.js": "/osrs-clue-simulator/static/js/main.5ed08605.chunk.js",
-    "main.js.map": "/osrs-clue-simulator/static/js/main.5ed08605.chunk.js.map",
+    "main.css": "/osrs-clue-simulator/static/css/main.bb171b83.chunk.css",
+    "main.js": "/osrs-clue-simulator/static/js/main.24bdb72f.chunk.js",
+    "main.js.map": "/osrs-clue-simulator/static/js/main.24bdb72f.chunk.js.map",
     "runtime~main.js": "/osrs-clue-simulator/static/js/runtime~main.838361bc.js",
     "runtime~main.js.map": "/osrs-clue-simulator/static/js/runtime~main.838361bc.js.map",
-    "static/js/2.a2ae708b.chunk.js": "/osrs-clue-simulator/static/js/2.a2ae708b.chunk.js",
-    "static/js/2.a2ae708b.chunk.js.map": "/osrs-clue-simulator/static/js/2.a2ae708b.chunk.js.map",
+    "static/js/2.bcf9159b.chunk.js": "/osrs-clue-simulator/static/js/2.bcf9159b.chunk.js",
+    "static/js/2.bcf9159b.chunk.js.map": "/osrs-clue-simulator/static/js/2.bcf9159b.chunk.js.map",
     "index.html": "/osrs-clue-simulator/index.html",
-    "precache-manifest.76c676625aa608fdbdcb765facca9f16.js": "/osrs-clue-simulator/precache-manifest.76c676625aa608fdbdcb765facca9f16.js",
+    "precache-manifest.340ca704eb8267dbe0be0bba0839c122.js": "/osrs-clue-simulator/precache-manifest.340ca704eb8267dbe0be0bba0839c122.js",
     "service-worker.js": "/osrs-clue-simulator/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/osrs-clue-simulator/static/css/main.2cce8147.chunk.css.map",
-    "static/media/logo.svg": "/osrs-clue-simulator/static/media/logo.5d5d9eef.svg"
+    "static/css/main.bb171b83.chunk.css.map": "/osrs-clue-simulator/static/css/main.bb171b83.chunk.css.map"
   }
 }
