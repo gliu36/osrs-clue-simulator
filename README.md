@@ -1,4 +1,4 @@
-# Clue School Simulator! <img src="https://vignette.wikia.nocookie.net/2007scape/images/d/df/Clue_scroll_detail.png/revision/latest?cb=20160510035736" height="48" width="48">
+# Clue School Simulator! <img src="https://vignette.wikia.nocookie.net/2007scape/images/d/df/Clue_scroll_detail.png/revision/latest?cb=20160510035736" height="24" width="24">
 
 
 This is a basic clue scroll simulator where you can test your RNG.
