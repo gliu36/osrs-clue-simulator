@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import '../styles/Main.css'
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+// import '../styles/Main.css'
 
 // Background Components
 import Navigation from './Navigation.js'
@@ -21,7 +21,7 @@ function Main() {
 					<Switch>
 						<Route path='/' exact component={About}/>
 						<Route path='/Beginner' component={Beginner}/>
-						<Route component={DoesNotExist}/>
+						<Route component={DoesNotExist} status={404}/>
 					</Switch>
 				</div>
 			</Router>
