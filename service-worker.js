@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/osrs-clue-simulator/precache-manifest.74ffb622763616b07935c6661700cf0b.js"
+  "/osrs-clue-simulator/precache-manifest.55a666bfc731fe6097d5adbce795cddd.js"
 );
 
 self.addEventListener('message', (event) => {

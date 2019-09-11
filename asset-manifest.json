@@ -1,17 +1,24 @@
 {
   "files": {
-    "main.css": "/osrs-clue-simulator/static/css/main.90257531.chunk.css",
-    "main.js": "/osrs-clue-simulator/static/js/main.abf9ed03.chunk.js",
-    "main.js.map": "/osrs-clue-simulator/static/js/main.abf9ed03.chunk.js.map",
+    "main.css": "/osrs-clue-simulator/static/css/main.b4cc249e.chunk.css",
+    "main.js": "/osrs-clue-simulator/static/js/main.a6229df3.chunk.js",
+    "main.js.map": "/osrs-clue-simulator/static/js/main.a6229df3.chunk.js.map",
     "runtime~main.js": "/osrs-clue-simulator/static/js/runtime~main.838361bc.js",
     "runtime~main.js.map": "/osrs-clue-simulator/static/js/runtime~main.838361bc.js.map",
     "static/css/2.60a6b8e0.chunk.css": "/osrs-clue-simulator/static/css/2.60a6b8e0.chunk.css",
-    "static/js/2.956c35f4.chunk.js": "/osrs-clue-simulator/static/js/2.956c35f4.chunk.js",
-    "static/js/2.956c35f4.chunk.js.map": "/osrs-clue-simulator/static/js/2.956c35f4.chunk.js.map",
+    "static/js/2.bc4bb240.chunk.js": "/osrs-clue-simulator/static/js/2.bc4bb240.chunk.js",
+    "static/js/2.bc4bb240.chunk.js.map": "/osrs-clue-simulator/static/js/2.bc4bb240.chunk.js.map",
     "index.html": "/osrs-clue-simulator/index.html",
-    "precache-manifest.74ffb622763616b07935c6661700cf0b.js": "/osrs-clue-simulator/precache-manifest.74ffb622763616b07935c6661700cf0b.js",
+    "precache-manifest.55a666bfc731fe6097d5adbce795cddd.js": "/osrs-clue-simulator/precache-manifest.55a666bfc731fe6097d5adbce795cddd.js",
     "service-worker.js": "/osrs-clue-simulator/service-worker.js",
     "static/css/2.60a6b8e0.chunk.css.map": "/osrs-clue-simulator/static/css/2.60a6b8e0.chunk.css.map",
-    "static/css/main.90257531.chunk.css.map": "/osrs-clue-simulator/static/css/main.90257531.chunk.css.map"
+    "static/css/main.b4cc249e.chunk.css.map": "/osrs-clue-simulator/static/css/main.b4cc249e.chunk.css.map",
+    "static/media/beginner_casket.webp": "/osrs-clue-simulator/static/media/beginner_casket.04ebf664.webp",
+    "static/media/easy_casket.webp": "/osrs-clue-simulator/static/media/easy_casket.d3d6208f.webp",
+    "static/media/elite_casket.webp": "/osrs-clue-simulator/static/media/elite_casket.bebf918a.webp",
+    "static/media/hard_casket.webp": "/osrs-clue-simulator/static/media/hard_casket.d7f36aae.webp",
+    "static/media/master_casket.webp": "/osrs-clue-simulator/static/media/master_casket.80d927a3.webp",
+    "static/media/medium_casket.webp": "/osrs-clue-simulator/static/media/medium_casket.a9322b21.webp",
+    "static/media/scroll.png": "/osrs-clue-simulator/static/media/scroll.2a384879.png"
   }
 }
