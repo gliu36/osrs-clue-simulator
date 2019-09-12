@@ -9,7 +9,7 @@ import hard_casket from '../images/hard_casket.webp'
 import elite_casket from '../images/elite_casket.webp'
 import master_casket from '../images/master_casket.webp'
 
-// import beginner_items from '../data/beginner_items.json'
+import clue_items from './data/clue_scroll_data.json'
 
 
 
@@ -60,7 +60,8 @@ class ClueTemplate extends Component {
 	}
 
 	handleCasket = (t) => {
-		console.log(t)
+		const items = clue_items[t.toLowerCase()]
+		console.log(items)
 	}
 	
 
@@ -68,7 +69,7 @@ class ClueTemplate extends Component {
 
 	const diffs = ['Beginner', 'Easy', 'Medium', 'Hard', 'Elite', 'Master']
 	const loot = this.state.loot
-
+	console.log(clue_items)
     return(
 		<div className="clue-body">
 			<Grid className="clue-grid">
