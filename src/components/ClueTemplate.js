@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Grid, Cell, List, ListItem, ListItemContent, ListItemAction, Button, DataTable, TableHeader } from 'react-mdl';
 
 import scroll from '../images/scroll.png'
+import Rewards from './Rewards.js'
 import beginner_casket from '../images/beginner_casket.webp'
 import easy_casket from '../images/easy_casket.webp'
 import medium_casket from '../images/medium_casket.webp'
@@ -73,34 +74,38 @@ class ClueTemplate extends Component {
     return(
 		<div className="clue-body">
 			<Grid className="clue-grid">
-			<Cell shadow={2}>
-				<h2>Clue Reward</h2>
-				<hr/>
-				<img src={scroll} alt="scroll" style={{height: '500px'}} />
-				<p>placeholder</p>
-			</Cell>
-			<Cell shadow={2} col={2}>
-				<h2>Caskets</h2>
-				<hr/>
-				<div className="clue-list">
-					<List style={{width: '250px'}}>
-						{diffs.map(this.clueListItem)}
-					</List>
-				</div>
-			</Cell>
-			<Cell shadow={2} col={4}>
-				<h2>Loot</h2>
-				<hr/>
-				<div className="loot-table">
-					<DataTable
-						shadow={0}
-						rows={loot}>
-						<TableHeader name="Item">Material</TableHeader>
-						<TableHeader numeric name="Quantity">Quantity</TableHeader>
-						<TableHeader numeric name="Price" cellFormatter={(price) => `${price} gp`} tooltip="from osrs ge">Price</TableHeader>
-					</DataTable>
-				</div>
-			</Cell>
+				<Cell className="scroll-cell" shadow={2}>
+					<h2>Clue Reward</h2>
+					<hr/>
+					<p>placeholder</p>
+					<p>placeholder</p>
+					<p>placeholder</p>
+
+					<Rewards />
+					{/* <img src={scroll} alt="scroll" style={{height: '500px'}} /> */}
+				</Cell>
+				<Cell shadow={2} col={2}>
+					<h2>Caskets</h2>
+					<hr/>
+					<div className="clue-list">
+						<List style={{width: '250px'}}>
+							{diffs.map(this.clueListItem)}
+						</List>
+					</div>
+				</Cell>
+				<Cell shadow={2} col={4}>
+					<h2>Loot</h2>
+					<hr/>
+					<div className="loot-table">
+						<DataTable
+							shadow={0}
+							rows={loot}>
+							<TableHeader name="Item">Material</TableHeader>
+							<TableHeader numeric name="Quantity">Quantity</TableHeader>
+							<TableHeader numeric name="Price" cellFormatter={(price) => `${price} gp`} tooltip="from osrs ge">Price</TableHeader>
+						</DataTable>
+					</div>
+				</Cell>
 			</Grid>
 		</div>
 		)

@@ -39,6 +39,21 @@
     text-align: center;
     justify-content: center;
   }
+
+  .rewards-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .scroll-cell {
+    background: url("../images/scroll.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+
+  }
   
   .clue-grid h2 {
     font-family: 'RuneScape UF', sans-serif;
