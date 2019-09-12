@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1dd21f852b25a51124ddd6f94e8ecdfd",
+    "revision": "17a71b107bf561c416924c2bc1fdf013",
     "url": "/osrs-clue-simulator/index.html"
   },
   {
-    "revision": "b1d6d61db33b80500f15",
+    "revision": "bb3a88338d452e9f83df",
     "url": "/osrs-clue-simulator/static/css/2.60a6b8e0.chunk.css"
   },
   {
-    "revision": "99257e08a38b89a812ba",
-    "url": "/osrs-clue-simulator/static/css/main.b4cc249e.chunk.css"
+    "revision": "850303c3b7c8150c8087",
+    "url": "/osrs-clue-simulator/static/css/main.c281da10.chunk.css"
   },
   {
-    "revision": "b1d6d61db33b80500f15",
-    "url": "/osrs-clue-simulator/static/js/2.bc4bb240.chunk.js"
+    "revision": "bb3a88338d452e9f83df",
+    "url": "/osrs-clue-simulator/static/js/2.a0b4a4f2.chunk.js"
   },
   {
-    "revision": "99257e08a38b89a812ba",
-    "url": "/osrs-clue-simulator/static/js/main.a6229df3.chunk.js"
+    "revision": "850303c3b7c8150c8087",
+    "url": "/osrs-clue-simulator/static/js/main.f2e7b037.chunk.js"
   },
   {
     "revision": "7ba9efdc17d1f44e633e",
