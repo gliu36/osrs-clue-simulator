@@ -15,7 +15,7 @@ except ImportError:
 __author__ = "gliu36"
 __license__ = "GPL"
 
-def extract(tables):
+def extract(tables, diff, outbase):
     x = []
 
     for items in tables:
@@ -29,7 +29,7 @@ def extract(tables):
                 
                 c = td.get('class')
                 
-                print(td)
+                # print(td)
                 if c != None:
                     c = c[0]
                 if c == 'item-col':
@@ -56,12 +56,30 @@ def extract(tables):
                         owo['price_per'] = 'untradable'
                     else:
                         owo['price_per'] = z
+                elif c == 'inventory-image':
+                    src = td.find('a').find('img')['src']
+                    owo['icon'] = src
+                    owo['id'] = get_image(src, diff, outbase)
             x.append(owo)
     
     return x
 
+def get_image(src, diff, outbase):
+    wiki_url = "https://oldschool.runescape.wiki/" + src
+    image = requests.get(wiki_url, stream=True)
 
-def main():
+    item_id = src[(src.rfind('?') + 1):]
+
+    outfile = outbase + diff + r'/' + item_id + r'.png'
+
+    with open(outfile, 'wb') as f:
+        f.write(image.content)
+    print("Wrote file to {0}".format(outfile))
+
+    return item_id
+
+
+def main(json_dump, outbase):
     url_beginner = "https://oldschool.runescape.wiki/w/Reward_casket_(beginner)"
     url_easy = "https://oldschool.runescape.wiki/w/Reward_casket_(easy)"
     url_medium = "https://oldschool.runescape.wiki/w/Reward_casket_(medium)"
@@ -77,12 +95,15 @@ def main():
         r = requests.get(url)
         soup = bs(r.content, features='lxml')
         tables = soup.find("div", id="bodyContent").findAll("table")
-        all_items[diff] = extract(tables)
+        all_items[diff] = extract(tables, diff, outbase)
     
 
-    print(all_items)
-    with open('clue_scroll_data.json', 'w') as f:
+    # print(all_items)
+    with open(json_dump, 'w') as f:
         json.dump(all_items, f, indent=4, ensure_ascii=False)
 
 if __name__ == '__main__':
-    main()
+    outbase = r'../src/images/'
+    json_dump = r'../src/components/data/clue_scroll_data.json'
+
+    main(json_dump, outbase)
