@@ -33,13 +33,17 @@ export function alias() {
     let item_probs = {}
     for (let k in clue_items) {
         item_probs[k] = generateProbabilities(clue_items[k])
-        console.log(clue_items[k])
+        
     }
-
+    console.log(item_probs['beginner'])
     // Implementation of Alias Method (bst for initialization/biased coin for generation)
 
+    
     let bst = new BST()
-    bst.insertAll([1,3,4,5])
+    for (let f in item_probs['beginner']) {
+        let n = item_probs['beginner'][f]
+        bst.insert(number(n))
+    }
     let root = bst.getRoot()
     let result = []
     bst.inorder(root, result)
