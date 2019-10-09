@@ -9,34 +9,51 @@ import hard_casket from '../images/hard_casket.webp'
 import elite_casket from '../images/elite_casket.webp'
 import master_casket from '../images/master_casket.webp'
 
+import { number, fraction, add } from 'mathjs'
+
+import { alias } from './alias_method'
+
 import clue_items from './data/clue_scroll_data.json'
 let LEVEL_ROLLS = {'beginner': [1,3], 'easy': [2,4], 'medium': [3,5], 'hard': [4,6], 'elite': [4,6], 'master': [5,7]}
 
+
+
 function generateReward(items) {
-	let probs = []
-	let a = 0
+	let prob_list = []
+	let total_prob = number(0)
 	for (let k in items) {
 		let d_r = items[k]['drop_rate'].replace(/,/,'')
-		let pattern = /(\d+)\/(\d+)/
+		let pattern = /(\d+\.?\d*)\/(\d+\.?\d*)/
 		if (pattern.test(d_r)) {
-			let d = d_r.match(pattern)[0]
+			let d = d_r.match(pattern)
+			console.log(d[2])
+			let frac = fraction(d[1],d[2])
 
+			prob_list.push(frac)
+			total_prob = add(total_prob, frac)
+
+			// let rounded_3 = eval(d).toFixed(9).slice(0, -1)
+			// probs.push(rounded_3)
 			
-			probs.push(eval(d))
+			// a += parseFloat(rounded_3)
+			
 
-			a += eval(d)
 		} else {
-			probs.push(0)
+			prob_list.push(number(0))
+			// console.log(items[k])
 		}
 	}
-	console.log(a)
-	console.log(probs)
+	console.log(number(total_prob))
+	console.log(prob_list)
+
+
 }
 
 
 function get_casket_rewards(level, items) {
 	const range = LEVEL_ROLLS[level]
 	let n = Math.floor(Math.random() * range[1]) + range[0]
+	n=1
 	let rewards = []
 	for (let i = 0; i < n; i++) {
 		rewards.push(generateReward(items))
@@ -97,7 +114,9 @@ class ClueTemplate extends Component {
 		let items = clue_items[t]
 		this.setState({image_ids: items})
 
-		let rewards = get_casket_rewards(t, items)
+		let test = alias()
+
+		// let rewards = get_casket_rewards(t, items)
 
 
 		// for (let k in items) {
@@ -136,7 +155,7 @@ class ClueTemplate extends Component {
 
 	const diffs = ['Beginner', 'Easy', 'Medium', 'Hard', 'Elite', 'Master']
 	const { loot, image_ids} = this.state
-	console.log(image_ids)
+	// console.log(image_ids)
     return(
 		<div className="clue-body">
 			<Grid className="clue-grid">
