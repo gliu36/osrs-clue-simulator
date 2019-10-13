@@ -11,7 +11,8 @@ import master_casket from '../images/master_casket.webp'
 
 import { number, fraction, add } from 'mathjs'
 
-import { alias } from './alias_method'
+import { alias_bst } from './alias_method_bst'
+import { alias } from './alias_vose'
 
 import clue_items from './data/clue_scroll_data.json'
 let LEVEL_ROLLS = {'beginner': [1,3], 'easy': [2,4], 'medium': [3,5], 'hard': [4,6], 'elite': [4,6], 'master': [5,7]}
@@ -20,16 +21,18 @@ let LEVEL_ROLLS = {'beginner': [1,3], 'easy': [2,4], 'medium': [3,5], 'hard': [4
 
 function generateReward(items) {
 	let prob_list = []
+	let prob_list_number = []
 	let total_prob = number(0)
 	for (let k in items) {
 		let d_r = items[k]['drop_rate'].replace(/,/,'')
 		let pattern = /(\d+\.?\d*)\/(\d+\.?\d*)/
 		if (pattern.test(d_r)) {
 			let d = d_r.match(pattern)
-			console.log(d[2])
+			// console.log(d[2])
 			let frac = fraction(d[1],d[2])
 
 			prob_list.push(frac)
+			prob_list_number.push(number(frac))
 			total_prob = add(total_prob, frac)
 
 			// let rounded_3 = eval(d).toFixed(9).slice(0, -1)
@@ -40,11 +43,13 @@ function generateReward(items) {
 
 		} else {
 			prob_list.push(number(0))
+			prob_list_number.push(number(0))
 			// console.log(items[k])
 		}
 	}
 	console.log(number(total_prob))
 	console.log(prob_list)
+	return prob_list_number[0]
 
 
 }
@@ -114,10 +119,16 @@ class ClueTemplate extends Component {
 		let items = clue_items[t]
 		this.setState({image_ids: items})
 
-		let test = alias()
+		// let test = alias_bst()
+		
+
 
 		// let rewards = get_casket_rewards(t, items)
 
+		// console.log(rewards)
+
+		let test = new alias([.1,.2,.3,.2,.2])
+		console.log(test.next())
 
 		// for (let k in items) {
 		// 	console.log(items[k]['drop_rate'])

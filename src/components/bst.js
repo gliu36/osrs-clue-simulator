@@ -62,15 +62,17 @@ export default class BST {
                 return node
             }
 
-            // If right child is empty
+            // If left child is empty
             if (node.left === null) {
                 node = node.right
                 return node
+            // If right child is empty
             } else if (node.right === null) {
                 node = node.left
                 return node
             }
 
+            // 2 children case
             let temp = this.getMinNode(node.right)
             node.data = temp.data
 
@@ -83,8 +85,26 @@ export default class BST {
         if (node.left === null)
             return node
         else
-            return this.findMinNode(node.left)
+            return this.getMinNode(node.left)
     }
+
+    getMaxNode(node) {
+        if (node.right === null)
+            return node
+        else
+            return this.getMaxNode(node.right)
+    }
+
+    removeMinNode(node) {
+        let min = this.getMinNode(node)
+        return this.removeNode(node, min.data)
+    }
+
+    removeMaxNode(node) {
+        let max = this.getMaxNode(node)
+        return this.removeNode(node, max.data)
+    }
+
 
     getRoot() {
         return this.root
